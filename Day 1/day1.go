@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"slices"
@@ -20,10 +21,10 @@ func main() {
 	leftColumn, rightColumn := splitAndSortInput(inputAsRows)
 
 	totalDistance := findTotalDistance(leftColumn, rightColumn)
-	println("total distance:", totalDistance)
+	fmt.Println("total distance:", totalDistance)
 
 	similarityScore := findSimilarityScore(leftColumn, rightColumn)
-	println("similarity score:",similarityScore)
+	fmt.Println("similarity score:", similarityScore)
 }
 
 func splitAndSortInput(inputAsRows []string) (leftColumn, rightColumn []int) {
